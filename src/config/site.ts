@@ -9,209 +9,139 @@ export const siteConfig = {
     tagline: "Premium Digital Assets",
     product: "Business Collection",
     description:
-      "Premium digital library with over 60,000 high-quality printable wall art designs for homes, offices, Airbnb properties, online shops, and creative businesses.",
+      "Get instant access to 60,000+ high-quality printable wall art designs. Print, decorate, sell, or use for creative projects — commercial use included.",
   },
 
   // Replace these with your Hotmart checkout links
   checkout: {
-    creator: "CREATOR_CHECKOUT_LINK",
     business: "BUSINESS_CHECKOUT_LINK",
-    ultimate: "ULTIMATE_CHECKOUT_LINK",
-    default: "BUSINESS_CHECKOUT_LINK", // Used for general CTAs
+    default: "BUSINESS_CHECKOUT_LINK",
   },
 
   contact: {
     email: "support@noranzo.com",
   },
 
-  social: {
-    instagram: "",
-    pinterest: "",
-    facebook: "",
-    twitter: "",
+  offer: {
+    headline: "60,000+ Printable Wall Art Designs Ready to Download Today",
+    subheadline:
+      "Get instant access to a massive collection of high-quality wall art designs you can print, decorate with, or use for creative projects.",
+    urgency: "Limited Launch Price — Save 50% Today",
+    regularPrice: 99,
+    salePrice: 49,
+    savingsPercent: 50,
+    cta: "Get Instant Access",
+    trustLine: "Secure checkout • Instant delivery • Lifetime access",
+    guarantee: "30-Day Money-Back Guarantee",
   },
 
   pricing: {
-    creator: {
-      name: "Creator Collection",
-      price: 19,
-      features: [
-        "10,000+ Designs",
-        "Instant Download",
-        "Commercial Use",
-        "Lifetime Access",
-      ],
-      cta: "Get Creator",
-    },
     business: {
       name: "Business Collection",
-      price: 49,
-      badge: "Most Popular",
+      regularPrice: 99,
+      salePrice: 49,
       features: [
-        "60,000+ Designs",
-        "High Resolution Files",
-        "Weekly New Collections",
-        "Commercial Use",
-        "Lifetime Access",
-        "Organized Categories",
+        "60,000+ printable designs",
+        "High-resolution files",
+        "Organized folders",
+        "Commercial use included",
+        "Lifetime access",
+        "Weekly new collections",
+        "Instant Google Drive access",
       ],
-      cta: "Get Business Collection",
-    },
-    ultimate: {
-      name: "Ultimate Collection",
-      price: 89,
-      features: [
-        "Everything in Business",
-        "Bonus Collections",
-        "Premium Mockups",
-        "Future Updates",
-        "Priority Support",
-      ],
-      cta: "Get Ultimate",
+      cta: "Get Instant Access",
     },
   },
 
-  hero: {
-    badges: [
-      "60,000+ Designs",
-      "Commercial Use",
-      "Lifetime Access",
-      "Weekly New Collections",
-    ],
+  whatYouGet: [
+    "60,000+ printable designs",
+    "High-resolution files",
+    "Organized folders",
+    "Commercial use",
+    "Lifetime access",
+    "Weekly new collections",
+    "Instant Google Drive access",
+  ],
+
+  useCases: [
+    "Etsy sellers",
+    "Print-on-demand shops",
+    "Home decorators",
+    "Airbnb owners",
+    "Office decoration",
+    "Cafés and restaurants",
+    "Digital product creators",
+  ],
+
+  comparison: {
+    individualCost: "$2–$10 each",
+    totalDesigns: "60,000+",
+    message:
+      "Buying individual designs can cost $2–$10 each. With Noranzo, you get 60,000+ designs for one small payment.",
   },
 
-  trustBar: [
-    "High Resolution Files",
-    "Organized Categories",
-    "Instant Download",
-    "Commercial Use",
-    "Weekly Updates",
-  ],
-
-  benefits: [
+  testimonials: [
     {
-      title: "60,000+ Premium Designs",
-      description:
-        "A vast library of curated wall art spanning every style, mood, and space.",
+      name: "Sarah M.",
+      role: "Etsy Seller",
+      quote:
+        "I launched my print shop with Noranzo designs and made my first sales within a week. The variety is incredible.",
     },
     {
-      title: "Commercial Use Included",
-      description:
-        "Sell on Etsy, print-on-demand platforms, or use in client projects with full rights.",
+      name: "James R.",
+      role: "Airbnb Host",
+      quote:
+        "Decorated 3 properties for a fraction of what I would have spent buying art individually. Guests love it.",
     },
     {
-      title: "Lifetime Access",
-      description:
-        "One purchase, unlimited access. Download anytime, as many times as you need.",
-    },
-    {
-      title: "Weekly New Collections",
-      description:
-        "Fresh designs added every week so your catalog never goes stale.",
-    },
-    {
-      title: "Organized Library",
-      description:
-        "Every file sorted by category, style, and format for effortless browsing.",
-    },
-    {
-      title: "High Resolution Files",
-      description:
-        "Print-ready files optimized for stunning results at any size.",
-    },
-  ],
-
-  categories: [
-    "Abstract",
-    "Minimal",
-    "Botanical",
-    "Luxury",
-    "Nature",
-    "Vintage",
-    "Black & White",
-    "Kids Room",
-    "Office",
-    "Boho",
-    "Modern",
-    "Quotes",
-  ],
-
-  mockups: [
-    {
-      title: "Home Decor",
-      description:
-        "Elevate living rooms, bedrooms, and kitchens with gallery-worthy art.",
-    },
-    {
-      title: "Airbnb & Hotels",
-      description:
-        "Create memorable guest experiences with cohesive, stylish interiors.",
-    },
-    {
-      title: "Creative Businesses",
-      description:
-        "Stock your Etsy shop or POD store with thousands of ready-to-sell designs.",
+      name: "Lisa K.",
+      role: "Interior Decorator",
+      quote:
+        "My clients always ask where I find the art. This collection saves me hours every single project.",
     },
   ],
 
   faq: [
     {
-      question: "How do I receive the files?",
+      question: "Is this a physical product?",
       answer:
-        "After your purchase, you'll receive instant access via a secure Google Drive link sent to your email. All files are organized in folders by category for easy browsing and downloading.",
+        "No. This is a 100% digital product. After purchase, you receive instant access to downloadable files via Google Drive. You can print them at home, at a print shop, or through any print-on-demand service.",
+    },
+    {
+      question: "How do I receive access?",
+      answer:
+        "Immediately after payment, you'll receive an email with a secure Google Drive link. All 60,000+ designs are organized in folders by category — ready to browse and download instantly.",
     },
     {
       question: "Can I use the designs commercially?",
       answer:
-        "Yes. Every collection includes a commercial license, allowing you to sell prints on Etsy, print-on-demand platforms, or use the artwork in client projects and business ventures.",
+        "Yes. Your purchase includes a full commercial license. Sell prints on Etsy, run a print-on-demand store, use in client projects, or decorate commercial spaces — all included.",
     },
     {
-      question: "Are the files ready to print?",
+      question: "Do I need design skills?",
       answer:
-        "Absolutely. All designs are delivered in high-resolution formats optimized for printing at various sizes, from small frames to large gallery walls.",
-    },
-    {
-      question: "Do I get lifetime access?",
-      answer:
-        "Yes. Your purchase grants lifetime access to the collection. You can download files anytime, as many times as you need, with no recurring fees.",
-    },
-    {
-      question: "Are new designs added?",
-      answer:
-        "Yes. We add new collections every week. Business and Ultimate collection holders receive all future updates at no additional cost.",
-    },
-    {
-      question: "Can I use this for Etsy or print-on-demand?",
-      answer:
-        "Yes. The commercial license included with every collection allows you to sell physical prints on Etsy, Shopify, Amazon, and any print-on-demand platform.",
-    },
-    {
-      question: "Is this a physical product?",
-      answer:
-        "No. Noranzo is a digital product. You receive downloadable files that you can print at home, at a local print shop, or through a print-on-demand service.",
-    },
-    {
-      question: "What if I need help?",
-      answer:
-        "Our support team is here to help. Reach out at support@noranzo.com and we'll respond within 24–48 hours. Ultimate collection holders receive priority support.",
-    },
-    {
-      question: "Can I request a refund?",
-      answer:
-        "Due to the digital nature of our products, all sales are final. Please review the collection details carefully before purchasing. See our Refund Policy for full details.",
+        "Not at all. Every file is ready to download and print. No editing, no design software, no experience needed. Just pick a design, download, and print.",
     },
     {
       question: "Are the files organized?",
       answer:
-        "Yes. Every collection is meticulously organized into folders by category, style, and format, making it easy to find exactly what you need.",
+        "Yes. All designs are sorted into clearly labeled folders by category and style — Abstract, Minimal, Botanical, Vintage, Office, and more. Finding what you need takes seconds.",
     },
-  ],
-
-  navigation: [
-    { label: "Benefits", href: "#benefits" },
-    { label: "Collections", href: "#collections" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
+    {
+      question: "Can I print them anywhere?",
+      answer:
+        "Yes. Files are high-resolution and print-ready. Use your home printer, a local print shop, Costco, Walgreens, or any online print-on-demand service.",
+    },
+    {
+      question: "Can I use them for my business?",
+      answer:
+        "Absolutely. Use them for Etsy listings, Shopify products, Airbnb properties, office spaces, cafés, hotels, or any commercial project. Commercial use is fully included.",
+    },
+    {
+      question: "What happens after payment?",
+      answer:
+        "You'll be redirected to a confirmation page and receive an email within minutes with your Google Drive access link. Download starts immediately — no waiting.",
+    },
   ],
 
   footerLinks: [

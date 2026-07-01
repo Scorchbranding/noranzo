@@ -19,23 +19,22 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.brand.name} — ${siteConfig.brand.tagline}`,
+    default: `60,000+ Printable Wall Art Designs — ${siteConfig.brand.name}`,
     template: `%s | ${siteConfig.brand.name}`,
   },
   description: siteConfig.brand.description,
   keywords: [
     "printable wall art",
-    "digital art collection",
+    "digital wall art download",
     "commercial use wall art",
-    "Etsy wall art",
-    "print on demand",
-    "home decor digital",
-    "Airbnb decor",
-    "interior design art",
+    "Etsy wall art bundle",
+    "print on demand designs",
+    "wall art collection",
+    "instant download art",
     "Noranzo",
   ],
   openGraph: {
-    title: `${siteConfig.brand.name} — ${siteConfig.brand.tagline}`,
+    title: `60,000+ Printable Wall Art Designs — ${siteConfig.brand.name}`,
     description: siteConfig.brand.description,
     type: "website",
     locale: "en_US",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.brand.name} — ${siteConfig.brand.tagline}`,
+    title: `60,000+ Printable Wall Art Designs — ${siteConfig.brand.name}`,
     description: siteConfig.brand.description,
   },
   robots: {

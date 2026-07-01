@@ -1,90 +1,114 @@
 "use client";
 
+import { ArrowRight, Zap } from "lucide-react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 
+export function LaunchOffer() {
+  return (
+    <div className="fixed top-[52px] left-0 right-0 z-40 bg-urgency text-white text-center py-2 px-4 text-xs md:text-sm font-bold tracking-wide">
+      <Zap className="inline h-3.5 w-3.5 mr-1 -mt-0.5" />
+      {siteConfig.offer.urgency}
+    </div>
+  );
+}
+
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-navy overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 -right-32 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
-        <div className="absolute bottom-1/4 -left-32 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40">
-        <div className="max-w-4xl">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
+    <section className="bg-navy pt-24 pb-12 md:pt-28 md:pb-16">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 items-center">
+          {/* Copy */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-gold text-sm font-semibold uppercase tracking-[0.25em] mb-6"
           >
-            {siteConfig.brand.tagline}
-          </motion.p>
+            <p className="inline-block rounded-full bg-gold/15 border border-gold/30 px-4 py-1 text-xs font-bold uppercase tracking-widest text-gold mb-5">
+              {siteConfig.offer.urgency}
+            </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-ivory leading-[1.1] tracking-tight"
-          >
-            Transform Any Space with{" "}
-            <span className="text-gold">Premium Printable Wall Art</span>
-          </motion.h1>
+            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+              {siteConfig.offer.headline}
+            </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg md:text-xl text-ivory/70 leading-relaxed max-w-2xl"
-          >
-            Get instant access to the Noranzo Business Collection — a premium
-            digital library with over 60,000 high-quality printable wall art
-            designs for homes, offices, Airbnb properties, online shops, and
-            creative businesses.
-          </motion.p>
+            <p className="mt-5 text-base md:text-lg text-ivory/70 leading-relaxed">
+              {siteConfig.offer.subheadline}
+            </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 flex flex-wrap gap-3"
-          >
-            {siteConfig.hero.badges.map((badge) => (
-              <span
-                key={badge}
-                className="inline-flex items-center rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-medium text-gold tracking-wide"
-              >
-                {badge}
+            {/* Price anchor */}
+            <div className="mt-6 flex items-baseline gap-3">
+              <span className="text-2xl text-ivory/40 line-through font-medium">
+                ${siteConfig.offer.regularPrice}
               </span>
-            ))}
+              <span className="text-5xl md:text-6xl font-bold text-gold">
+                ${siteConfig.offer.salePrice}
+              </span>
+              <span className="rounded-md bg-urgency px-2 py-0.5 text-xs font-bold text-white uppercase">
+                Save {siteConfig.offer.savingsPercent}%
+              </span>
+            </div>
+
+            <div className="mt-8">
+              {/* Replace checkout.default with your Hotmart link in site.ts */}
+              <Button href={siteConfig.checkout.default} variant="cta" pulse className="w-full sm:w-auto !px-10 !py-5">
+                {siteConfig.offer.cta}
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </div>
+
+            <p className="mt-4 text-xs text-ivory/50">
+              {siteConfig.offer.trustLine}
+            </p>
           </motion.div>
 
+          {/* Product mockup */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="relative"
           >
-            {/* Replace checkout.default with your Hotmart link in site.ts */}
-            <Button href={siteConfig.checkout.default} variant="primary">
-              Get Instant Access
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="relative rounded-lg overflow-hidden border-2 border-gold/30 shadow-2xl shadow-gold/10 bg-gradient-to-br from-slate-800 via-navy to-slate-900 aspect-[4/3]">
+              {/* Mockup: folder grid representing design library */}
+              <div className="absolute inset-0 p-6 grid grid-cols-3 gap-3">
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="rounded-sm bg-white/5 border border-white/10 overflow-hidden"
+                  >
+                    <div
+                      className={`h-full w-full bg-gradient-to-br ${
+                        [
+                          "from-amber-900/60 to-amber-950/80",
+                          "from-emerald-900/60 to-emerald-950/80",
+                          "from-slate-700/60 to-slate-900/80",
+                          "from-rose-900/60 to-rose-950/80",
+                          "from-blue-900/60 to-blue-950/80",
+                          "from-stone-700/60 to-stone-900/80",
+                          "from-teal-900/60 to-teal-950/80",
+                          "from-orange-900/60 to-orange-950/80",
+                          "from-indigo-900/60 to-indigo-950/80",
+                        ][i]
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
+              {/* Badge overlay */}
+              <div className="absolute bottom-4 left-4 right-4 rounded-md bg-navy/90 backdrop-blur-sm border border-gold/30 px-4 py-3 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-ivory/60">Business Collection</p>
+                  <p className="text-lg font-bold text-gold">60,000+ Designs</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-ivory/40 line-through">${siteConfig.offer.regularPrice}</p>
+                  <p className="text-xl font-bold text-white">${siteConfig.offer.salePrice}</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-4 text-sm text-ivory/40"
-          >
-            Instant digital delivery through secure checkout.
-          </motion.p>
         </div>
       </div>
     </section>

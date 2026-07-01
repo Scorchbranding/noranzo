@@ -6,6 +6,7 @@
   --ivory: #f8f5ef;
   --charcoal: #111111;
   --white: #ffffff;
+  --red-urgency: #dc2626;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-ivory: var(--ivory);
   --color-charcoal: var(--charcoal);
   --color-white: var(--white);
+  --color-urgency: var(--red-urgency);
   --font-heading: var(--font-playfair), ui-serif, Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
@@ -23,7 +25,7 @@ html {
 }
 
 body {
-  background-color: var(--ivory);
+  background-color: var(--white);
   color: var(--charcoal);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
@@ -31,4 +33,13 @@ body {
 ::selection {
   background-color: color-mix(in srgb, var(--gold) 30%, transparent);
   color: var(--navy);
+}
+
+@keyframes pulse-cta {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 40%, transparent); }
+  50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--gold) 0%, transparent); }
+}
+
+.cta-pulse {
+  animation: pulse-cta 2s ease-in-out infinite;
 }

@@ -14,8 +14,10 @@ export const siteConfig = {
 
   // Replace these with your Hotmart checkout links
   checkout: {
+    creator: "CREATOR_CHECKOUT_LINK",
     business: "BUSINESS_CHECKOUT_LINK",
-    default: "BUSINESS_CHECKOUT_LINK",
+    ultimate: "ULTIMATE_CHECKOUT_LINK",
+    default: "BUSINESS_CHECKOUT_LINK", // Hero & main CTAs
   },
 
   contact: {
@@ -36,20 +38,57 @@ export const siteConfig = {
   },
 
   pricing: {
+    sectionTitle: "Choose Your Collection",
+    sectionSubtitle:
+      "Start small or unlock the full Noranzo library. The Business Collection is our most popular option for creators and online sellers.",
+    comparisonNote:
+      "Not sure which one to choose? Most customers choose the Business Collection because it unlocks the full 60,000+ design library with weekly updates.",
+    creator: {
+      name: "Creator Collection",
+      regularPrice: 39,
+      salePrice: 19,
+      bestFor: "Beginners",
+      features: [
+        "10,000+ Printable Wall Art Designs",
+        "High-Resolution Files",
+        "Commercial Use",
+        "Lifetime Access",
+        "Instant Google Drive Access",
+      ],
+      cta: "Get Creator Collection",
+    },
     business: {
       name: "Business Collection",
       regularPrice: 99,
       salePrice: 49,
+      badge: "MOST POPULAR",
+      bestFor: "Creators & sellers",
       features: [
-        "60,000+ printable designs",
-        "High-resolution files",
-        "Organized folders",
-        "Commercial use included",
-        "Lifetime access",
-        "Weekly new collections",
-        "Instant Google Drive access",
+        "60,000+ Printable Wall Art Designs",
+        "High-Resolution Files",
+        "Commercial Use",
+        "Lifetime Access",
+        "Weekly New Collections",
+        "Organized Categories",
+        "Instant Google Drive Access",
       ],
-      cta: "Get Instant Access",
+      cta: "Get Business Collection",
+    },
+    ultimate: {
+      name: "Ultimate Collection",
+      regularPrice: 179,
+      salePrice: 89,
+      bestFor: "Serious businesses",
+      features: [
+        "Everything in Business Collection",
+        "Premium Mockup Pack",
+        "Bonus Design Collections",
+        "Future Exclusive Drops",
+        "Priority Support",
+        "Commercial Use",
+        "Lifetime Access",
+      ],
+      cta: "Get Ultimate Collection",
     },
   },
 

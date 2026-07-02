@@ -1,6 +1,8 @@
 import { siteConfig } from "@/config/site";
 
 export function JsonLd() {
+  const plans = ["creator", "business", "ultimate"] as const;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -10,13 +12,13 @@ export function JsonLd() {
       "@type": "Brand",
       name: siteConfig.brand.name,
     },
-    offers: {
+    offers: plans.map((key) => ({
       "@type": "Offer",
-      name: siteConfig.pricing.business.name,
-      price: siteConfig.pricing.business.salePrice,
+      name: siteConfig.pricing[key].name,
+      price: siteConfig.pricing[key].salePrice,
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-    },
+    })),
   };
 
   return (
